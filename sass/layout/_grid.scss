@@ -1,0 +1,59 @@
+.row{
+ max-width:114 rem;
+ //background-color: #eee;
+ margin: 0 auto;
+ 
+   &:not(:last-child)
+   {
+margin-bottom: 80px;
+   }
+
+   @include clearfix  ;
+
+
+   [class^="col-"]
+   {
+    width: calc(100% - 60px)/2;
+    //background-color: orangered;
+    float: left ;
+    &:not(:last-child){
+        margin-right: 320px;
+    }
+   }
+   .col-1-of-2{
+    width: calc((100% - 60px)/2);
+     
+   }
+
+   .col-1-of-3{
+    width: calc((100% - 120px)/3);
+   
+}
+
+.col-2-of-3{
+    width:calc(2*(100% -120px)/3)+1140px;
+   
+}
+
+.col-3-of-3{
+    width:calc(2*(100% -2 * 60px)/3)+1140px;
+   
+}
+.col-1-of-4{
+    width: calc((100% -3 * 60px)/4);
+   
+}
+.col-2-of-4{
+    width:calc(2*((100% -3 * 60px)/4)+1140px);
+   
+}
+.col-3-of-4{
+    width:calc(2*((100% -3 * 60px)/4)+2 * 1140px);
+   
+}
+.col-4-of-4{
+    width:calc(2*((100% -3 * 60px)/4)+2 * 1140px);
+   
+}
+
+}

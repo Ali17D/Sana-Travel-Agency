@@ -1,0 +1,323 @@
+
+.card {
+
+    // FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+    
+    &__side {
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+        &--front {
+            background-color:white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom,  rgba(247, 222, 141, 0.85));
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgba(247, 222, 141, 0.85), rgba(250, 162, 0 , 0.85));
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgba(247, 222, 141, 0.85), rgba(250, 162, 0 , 0.85));
+            }
+        }
+    }
+  
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode:screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 540% 0, 340% 450%, 0 320%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+        &--1 {
+            background-image: linear-gradient(to right bottom,  rgba(247, 222, 141, 0.85)), 
+            url(../img/hero.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba(111, 213, 165, 0.8), rgba(40, 180, 133,0.8)),url(../img/tur.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba(126, 213, 111,0.8), rgba(40, 180, 133,0.8)),url(../img/kaaba.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba(126, 213, 111,0.8), rgba(40, 180, 133,0.8)),url(../img/hero.jpg);
+        }
+
+
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba(126, 213, 111,0.8), rgba(40, 180, 133,0.8)),url(../img/hero.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba(126, 213, 111,0.8), rgba(40, 180, 133,0.8)),url(../img/hero.jpg);
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid grey  ;
+                }
+            }
+        }
+    }
+
+    // FRONT SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin-bottom: 8rem;
+    }
+
+    &__price-only
+     {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value
+    {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+
+
+
+
+}
+
+/*.card
+//Functionalities
+
+{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+
+
+&__side{
+    
+    
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    margin-bottom: 10rem;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 11px;
+
+    &--front
+    {
+background-color:white;
+    }
+
+&--back{
+background-color: rgb(255, 200, 98);
+transform: rotateY(80deg);
+&-1
+{
+    background-image: linear-gradient(to right bottom, rgb(247, 222, 141), rgb(250, 162, 0));
+}
+
+}
+}
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+//front side styling
+&-picture
+{
+    background-size: cover;
+    height:35rem;
+    background-blend-mode: color;
+    
+    &-1
+    {
+        background-image: linear-gradient(to right bottom, rgb(247, 222, 141), rgb(250, 162, 0)), url(../img/kaaba.jpg);
+    }
+    &-2
+    {
+        background-image: url(../img/kaaba.jpg);
+    }
+    &-3
+    {
+        background-image: url(../img/kaaba.jpg);
+    }
+
+
+ &-heading
+ {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 150%;
+
+
+
+ 
+
+ 
+
+ &__heading-span  
+  {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+        background-color: red;
+    }
+
+    &--2 {
+        background-image: linear-gradient(to right bottom, 
+        rgba(rgb(143, 228, 143), .85), 
+        rgba(rgb(75, 224, 75), .85));
+    }
+
+    &--3 {
+        background-image: linear-gradient(to right bottom, 
+        rgba(rgb(173, 173, 240), .85), 
+        rgba(blue, .85));
+    }
+}
+ }
+&__details {
+    padding: 3rem;
+
+    ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgb(241, 238, 238);
+            }
+        }
+    }
+}
+
+ // FRONT SIDE STYLING
+ /*&__cta 
+ {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+&__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+}
+
+&__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+&__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+}
+}
+*/
+

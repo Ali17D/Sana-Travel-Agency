@@ -1,0 +1,32 @@
+.feature-box{
+    background-color:transparent;
+    background-blend-mode: color;
+    font-size: 3px;
+    padding: 5rem;
+    margin: 7rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba (black, .15);
+
+
+
+    &__icon{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right,$color2,$color1);
+        //-webkit-background-clip: text;
+        color: transparent;
+    
+    &:hover{
+        transform: translateY(-1rem) scale(1);
+    }
+
+    }
+
+    &__text{
+color:white;
+font-size: 3rem;
+background-color: transparent;
+    }
+}
